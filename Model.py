@@ -242,4 +242,4 @@ def TransformerModel(source_vocab_size: int, target_vocab_size: int, source_sequ
     for p in transformer.parameters():
         if p.dim() > 1:
             nn.init.xavier_uniform(p)
-        return transformer
+    return transformer
