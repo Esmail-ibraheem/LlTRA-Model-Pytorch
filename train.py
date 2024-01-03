@@ -29,7 +29,7 @@ def Build_Tokenizer(configuration, dataset, language):
         tokenizer = Tokenizer.from_file(str(tokenizer_path))
 
 def Load_Dataset(configuration, dataset, language):
-    dataset_Raw = load_dataset(" ", f"{configuration['source_language']} - {configuration['target_language']}", split="train")
+    dataset_Raw = load_dataset("ImruQays/Thaqalayn-Classical-Arabic-English-Parallel-texts", f"{configuration['source_language']} - {configuration['target_language']}", split="train")
 
     source_dataset_Raw = Build_Tokenizer(configuration, dataset_Raw, configuration['source_language'])
     target_dataset_Raw = Build_Tokenizer(configuration, dataset_Raw, configuration['target_language'])
