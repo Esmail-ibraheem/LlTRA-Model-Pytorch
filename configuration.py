@@ -1,6 +1,6 @@
 from pathlib import Path
 
-def get_config():
+def get_configuration():
     return {
         "batch_size": 8,
         "num_epochs": 20,
