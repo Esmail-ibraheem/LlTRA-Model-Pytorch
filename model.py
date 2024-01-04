@@ -1,8 +1,6 @@
 #LlTRA = Language to Language Transformer model.
 
-from ast import NodeTransformer
 import math
-from turtle import Turtle
 import torch 
 import torch.nn as nn 
 
