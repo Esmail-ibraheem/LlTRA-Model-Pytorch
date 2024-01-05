@@ -1,6 +1,6 @@
 from pathlib import Path
 
-def get_configuration():
+def Get_configuration():
     return {
         "batch_size": 8,
         "num_epochs": 20,
@@ -17,7 +17,7 @@ def get_configuration():
         "experiment_name": "runs/tmodel"
     }
 
-def get_weights_file_path(config, epoch: str):
+def Get_weights_file_path(config, epoch: str):
     model_folder = f"{config['datasource']}_{config['model_folder']}"
     model_filename = f"{config['model_basename']}{epoch}.pt"
     return str(Path('.') / model_folder / model_filename)

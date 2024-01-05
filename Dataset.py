@@ -1,4 +1,4 @@
-import torch
+import torch 
 from torch.utils.data import Dataset
 
 class BilingualDataset(Dataset):
@@ -17,7 +17,7 @@ class BilingualDataset(Dataset):
         self.PAD_token = torch.Tensor(source_tokenizer.token_to_id("[PAD]"), dtype = torch.int64)
         self.EOS_token = torch.Tensor(source_tokenizer.token_to_id("[EOS]"), dtype = torch.int64)
 
-    def __Length__(self):
+    def __length__(self):
         return len(self.dataset)
 
     def __getitem__(self, index) -> any:
@@ -25,43 +25,43 @@ class BilingualDataset(Dataset):
         source_text = source_target_dataset['translation'][self.source_language]
         target_text = source_target_dataset['translation'][self.target_language]
 
-        encode_source_tokenizer = self.source_tokenizer.encode(source_text).ids
-        encode_target_tokenizer = self.source_tokenizer.encode(target_text).ids
+        source_tokenizer = self.source_tokenizer.encode(source_text).ids 
+        target_tokenizer = self.target_tokenizer.encode(target_text).ids 
 
-        encode_source_padding = self.sequence_length - len(encode_source_tokenizer) - 2 
-        encode_target_padding = self.sequence_length - len(encode_target_tokenizer) - 1
+        source_padding = self.sequence_length - len(source_tokenizer) - 2 
+        target_padding = self.sequence_length - len(target_tokenizer) - 1
 
-        if encode_source_padding < 0 or  encode_target_padding < 0:
-            raise ValueError("the Sequence is too long")
+        if source_padding < 0 or target_padding < 0:
+            raise ValueError("the sequence is too long")
 
         encoder_source = torch.cat(
             [
                 self.SOS_token,
-                torch.tensor(encode_source_tokenizer, dtype=torch.int64),
+                torch.tensor(source_tokenizer, dtype=torch.int64),
                 self.EOS_token,
-                torch.tensor([self.PAD_token] * encode_source_padding, dtype=torch.int64)
+                torch.tensor([self.PAD_token] * source_padding, dtype= torch.int64)
             ]
         )
 
         encoder_target = torch.cat(
             [
                 self.SOS_token,
-                torch.tensor(encode_target_tokenizer, dtype=torch.int64),
-                torch.tensor([self.PAD_token] * encode_target_padding, dtype=torch.int64)
+                torch.tensor(target_tokenizer, dtype=torch.int64),
+                torch.tensor([self.PAD_token] * target_padding, dtype=torch.int64)
             ]
-        )
+        ) 
 
         Target = torch.cat(
             [
-                torch.tensor(encode_target_tokenizer, dtype=torch.int64),
-                torch.tensor([self.PAD_token] * encode_target_padding, dtype=torch.int64),
+                torch.tensor(target_tokenizer, dtype=torch.int64),
+                torch.tensor([self.PAD_token] * target_padding, dtype=torch.int64),
                 self.EOS_token
             ]
         )
 
-        assert encoder_source.size(0) == 0 
-        assert encoder_target.size(0) == 0 
-        assert Target.size(0) == 0 
+        assert encoder_source.size(0) == self.sequence_length 
+        assert encoder_target.size(0) == self.sequence_length 
+        assert Target.size(0) == self.sequence_length 
 
         return {
             "encoder_source": encoder_source,
@@ -73,9 +73,7 @@ class BilingualDataset(Dataset):
             "target_text": target_text
         }
 
-
 def Casual_mask(size):
     mask = torch.triu(torch.ones(1, size, size), diagonal=1).dtype(torch.int64)
-    return mask == 0
-  
+    return mask == 0 
     
