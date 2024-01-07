@@ -25,15 +25,15 @@ class PositionalEncodingLayer(nn.Module):
 
         PE = torch.zeros(sequence_length, d_model)
         Position = torch.arange(0, sequence_length, dtype=torch.float).unsqueeze(1)
-        deviation_term = torch.exp(torch.arange(0, d_model, 2) * (-math.log(10000.0) / d_model))
+        deviation_term = torch.exp(torch.arange(0, d_model, 2).float() * (-math.log(10000.0) / d_model))
 
-        PE[:, 0::2] = torch.sin(Position + deviation_term)
-        PE[:, 1::2] = torch.cos(Position + deviation_term)
+        PE[:, 0::2] = torch.sin(Position * deviation_term)
+        PE[:, 1::2] = torch.cos(Position * deviation_term)
         PE = PE.unsqueeze(0)
         self.register_buffer('PE', PE)
 
     def forward(self, x):
-        x = x + (self.PE[:, x.shape[1], :]).requires_grad(False)
+        x = x + (self.PE[:, :x.shape[1], :]).requires_grad_(False)
         return self.dropout(x)
 
 class NormalizationLayer(nn.Module):
@@ -46,9 +46,9 @@ class NormalizationLayer(nn.Module):
 
     def forward(self, x):
         mean = x.mean(dim = -1, keepdim = True)
-        standard_deviation = x.standard_deviation(dim = -1, keepdim = True)
+        std = x.std(dim = -1, keepdim = True)
 
-        return self.Alpha * (x - mean) / (standard_deviation + self.Epslone) + self.Bias
+        return self.Alpha * (x - mean) / (std + self.Epslone) + self.Bias
 
 class FeedForwardBlock(nn.Module):
 
@@ -156,7 +156,7 @@ class DecoderBlock(nn.Module):
         self.decoder_self_attention_block = decoder_self_attention_block
         self.decoder_cross_attention_block = decoder_cross_attention_block
         self.decoder_feed_forward_block = decoder_feed_forward_block
-        self.residual_connection = nn.ModuleList([ResidualConnection[dropout] for _ in range(3)])
+        self.residual_connection = nn.ModuleList([ResidualConnection(dropout) for _ in range(3)])
 
     def forward(self, x, Encoder_output, maks, target_mask):
         x = self.residual_connection[0](x, lambda x: self.decoder_self_attention_block(x, x, x, target_mask))
@@ -185,7 +185,7 @@ class LinearLayer(nn.Module):
         self.Linear = nn.Linear(d_model, vocab_size)
 
     def forward(self, x):
-        return torch.log_softmax(self.Linear(x))
+        return self.Linear(x)
 
 
 class TransformerBlock(nn.Module):
