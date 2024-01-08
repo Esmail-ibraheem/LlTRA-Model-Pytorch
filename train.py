@@ -4,7 +4,7 @@ from torch.utils.data import Dataset, DataLoader, random_split
 from torch.utils.tensorboard import SummaryWriter
 
 from model import TransformerModel
-from dataset import BilingualDataset, casual_mask
+from dataset import BilingualDataset
 from configuration import Get_configuration, Get_weights_file_path, latest_weights_file_path
 
 from datasets import load_dataset
@@ -74,10 +74,6 @@ def Get_model(configuration, source_vocab_size, target_vocab_size):
 def train_model(configuration):
     device = "cuda" if torch.cuda.is_available() else "mps" if torch.has_mps or torch.backends.mps.is_available() else "cpu"
     print("Using device:", device)
-    if (device == 'cuda'):
-        print(f"Device name: {torch.cuda.get_device_name(device.index)}")
-        print(f"Device memory: {torch.cuda.get_device_properties(device.index).total_memory / 1024 ** 3} GB")
-    device = torch.device(device)
 
     Path(f"{configuration['datasource']}_{configuration['model_folder']}").mkdir(parents=True, exist_ok=True)
 
