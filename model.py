@@ -94,7 +94,7 @@ class MultiHeadAttentionBlock(nn.Module):
         if dropout is not None:
             self_attention_scores = dropout(self_attention_scores)
 
-        return (self_attention_scores @ Value), self_attention_scores
+        return (self_attention_scores @ Value)
 
     def forward(self, query, key, value, mask):
         Query = self.W_Q(query)
