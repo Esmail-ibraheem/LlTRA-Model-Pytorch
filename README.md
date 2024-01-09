@@ -1,6 +1,7 @@
 # LlTRA-Model.
 
 LlTRA stands for: Language to Language Transformer model from the paper "Attention is all you Need", building transformer model:[Transformer model](https://github.com/Esmail-ibraheem/Transformer-model) from scratch and use it for translation using pytorch.
+![Pasted image 20231220223916](https://github.com/Esmail-ibraheem/LlTRA-Model./assets/113830751/823ac36c-77c1-4e14-bec3-b8a18201cea3)
 
 ### Problem Statement:
 
@@ -10,7 +11,7 @@ In the rapidly evolving landscape of natural language processing (NLP) and machi
 
 ### Goal:
 
-Develop a specialized language-to-language transformer model that accurately translates from the Arabic language to the English language, ensuring semantic fidelity, contextual awareness, cross-lingual adaptability, and the retention of grammar and style. The model should provide efficient training and inference processes to make it practical and accessible for a wide range of applications, ultimately contributing to the advancement of English-to-Arabic language translation capabilities.
+Develop a specialized language-to-language transformer model that accurately translates from the Arabic language to the English language, ensuring semantic fidelity, contextual awareness, cross-lingual adaptability, and the retention of grammar and style. The model should provide efficient training and inference processes to make it practical and accessible for a wide range of applications, ultimately contributing to the advancement of Arabic-to-English language translation capabilities.
 
 ---
 
