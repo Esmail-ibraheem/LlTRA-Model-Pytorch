@@ -10,7 +10,7 @@ In the rapidly evolving landscape of natural language processing (NLP) and machi
 
 ### Goal:
 
-Develop a specialized language-to-language transformer model that accurately translates from the English language to the Arabic language, ensuring semantic fidelity, contextual awareness, cross-lingual adaptability, and the retention of grammar and style. The model should provide efficient training and inference processes to make it practical and accessible for a wide range of applications, ultimately contributing to the advancement of English-to-Arabic language translation capabilities.
+Develop a specialized language-to-language transformer model that accurately translates from the Arabic language to the English language, ensuring semantic fidelity, contextual awareness, cross-lingual adaptability, and the retention of grammar and style. The model should provide efficient training and inference processes to make it practical and accessible for a wide range of applications, ultimately contributing to the advancement of English-to-Arabic language translation capabilities.
 
 ---
 
