@@ -42,6 +42,7 @@ os.chdir('/content/drive/MyDrive/TrainModel')
 
 %run train.py
 ```
+hours of training until now: 8 hours 
 --- 
 
 check the theoretical part: https://github.com/Esmail-ibraheem/Transformer-model-theoretical-part
