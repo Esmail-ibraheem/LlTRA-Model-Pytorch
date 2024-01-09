@@ -1,6 +1,6 @@
 # LlTRA-Model.
 
-LlTRA stands for: Language to Language Transformer model from the paper "Attention is all you Need", building transformer model: https://github.com/Esmail-ibraheem/Transformer-model, from scratch and use it for translation using pytorch.
+LlTRA stands for: Language to Language Transformer model from the paper "Attention is all you Need", building transformer model:[Transformer model](https://github.com/Esmail-ibraheem/Transformer-model) from scratch and use it for translation using pytorch.
 
 ### Problem Statement:
 
@@ -17,7 +17,8 @@ Develop a specialized language-to-language transformer model that accurately tra
 ### Dataset used:
 
 from hugging Face 
-https://huggingface.co/datasets/opus_infopankki/viewer/ar-en/train?p=3
+[huggingface/opus_infopankki](https://huggingface.co/datasets/opus_infopankki/viewer/ar-en/train?p=3)
+
 
 ---
 
@@ -45,4 +46,5 @@ os.chdir('/content/drive/MyDrive/TrainModel')
 hours of training until now: 8 hours 
 --- 
 
-check the theoretical part: https://github.com/Esmail-ibraheem/Transformer-model-theoretical-part
+check the theoretical part: [Theoretical part](https://github.com/Esmail-ibraheem/Transformer-model-theoretical-part)
+
