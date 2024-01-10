@@ -80,7 +80,11 @@ hours of training until now: 8 hours.
     --------------------------------------------------------------------------------
     SOURCE: القاسم المشترك لهذه الغرف هو عمل القهوة وإمكانية استعمال الكومبيوتر المجهز باشتراك الإنترنت مجاناً كذلك يمكن في عديد من هذه الغرف التمتع بالوجبات المحضرة في الغرفة بسعر معقول والتي تقدم في أيام العمل.
     TARGET: All centres have a cafe and the opportunity to use a computer with a free-of-charge Internet connection. Most resident centres also offer the opportunity to enjoy an affordable lunch prepared at the centre that is served on weekdays.
-    PREDICTED: All centres are open to and at a . Many centres also offer an opportunity to use a at a centre in the centre where are .
+    PREDICTED: All centres are open to and at a . Many centres also offer an opportunity to use a at a centre in the centre where are.
+    --------------------------------------------------------------------------------
+    SOURCE: يجب عليك أيضاً أن تستطيع إثبات على سبيل المثال بالوصفة الطبية أو بالتقرير الطبي بأن الغرض من الدواء هو استخدامك أنت الشخصي.
+    TARGET: In addition, you must be able to prove with a prescription or medical certificate, for example, that the medicine is intended for your personal use.
+    PREDICTED: You must also have to prove your identity with a friend or friend , for example , that the medicine is intended for your personal use .
 --- 
 
 check the theoretical part: [Theoretical part](https://github.com/Esmail-ibraheem/Transformer-model-theoretical-part)
