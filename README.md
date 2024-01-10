@@ -58,9 +58,9 @@ hours of training until now: 8 hours.
     TARGET: A foreign-language family is entitled to interpreting services as necessary.
     PREDICTED: in a native language is provided by the services of the services for the elderly .
     --------------------------------------------------------------------------------
-    SOURCE: يمكن لمواطني الاتحاد الأوروبي (EU) والمنطقة الاقتصادية الأوروبية (ETA) أن يعلنوا عن أنفسهم كباحثين عن العمل وذلك بواسطة الخدمة الشبكية لمكتب العمل والموارد المعيشية في قسم "Oma asiointi" المعاملات الشخصية.
-    TARGET: To find web pages for jobs on the Internet, write “avoimet työpaikat” (vacancies) in the search engine’s text field. Many web pages for jobs allow you to fill in and send a job application and to enclose your CV.
-    PREDICTED: of : ( ) and , , and .
+    SOURCE: قمت بارتكاب جرائم وتُعتبر بأنك خطير على النظام أو الأمن العام.
+    TARGET: you have committed crimes and are considered a danger to public order or safety
+    PREDICTED: you have committed crimes and are considered a danger to public order or safety
     --------------------------------------------------------------------------------
     SOURCE: عندما تلتحق بالدراسة، فستحصل على الحق في إنجاز كلتا الدرجتين العلميتين.
     TARGET: When you are accepted into an institute of higher education, you receive the right to complete both degrees.
@@ -85,6 +85,10 @@ hours of training until now: 8 hours.
     SOURCE: يجب عليك أيضاً أن تستطيع إثبات على سبيل المثال بالوصفة الطبية أو بالتقرير الطبي بأن الغرض من الدواء هو استخدامك أنت الشخصي.
     TARGET: In addition, you must be able to prove with a prescription or medical certificate, for example, that the medicine is intended for your personal use.
     PREDICTED: You must also have to prove your identity with a friend or friend , for example , that the medicine is intended for your personal use .
+    --------------------------------------------------------------------------------
+    SOURCE: إذا كان لديك ترخيص إقامة في فنلندا، ولكن لم تُمنح ترخيص إقامة استمراري، فسوف تصدر دائرة شؤون الهجرة قراراً بالترحيل.
+    TARGET: If you already have a residence permit in Finland but are not granted a residence permit extension, the Finnish Immigration Service makes a deportation decision.
+    PREDICTED: If you have a residence permit in but are not granted a residence permit , the Service makes a decision .
 --- 
 
 check the theoretical part: [Theoretical part](https://github.com/Esmail-ibraheem/Transformer-model-theoretical-part)
