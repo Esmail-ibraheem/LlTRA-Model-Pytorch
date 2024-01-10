@@ -19,6 +19,11 @@ Develop a specialized language-to-language transformer model that accurately tra
 from hugging Face 
 [huggingface/opus_infopankki](https://huggingface.co/datasets/opus_infopankki/viewer/ar-en/train?p=3)
 
+---
+
+### Configuration:
+
+this is the settings of the model, You can customize the source and target languages, sequence lengths for each, the number of epochs, batch size, and more.
 
 ---
 
@@ -43,7 +48,39 @@ os.chdir('/content/drive/MyDrive/TrainModel')
 
 %run train.py
 ```
-hours of training until now: 8 hours 
+hours of training until now: 8 hours.
+
+---
+
+### Results:
+
+SOURCE: العائلات الناطقة بلغة أجنبية لديها الحق في خدمات الترجمة عند اللزوم.
+    TARGET: A foreign-language family is entitled to interpreting services as necessary.
+ PREDICTED: in a native language is provided by the services of the services for the elderly .
+--------------------------------------------------------------------------------
+    SOURCE: يمكن لمواطني الاتحاد الأوروبي (EU) والمنطقة الاقتصادية الأوروبية (ETA) أن يعلنوا عن أنفسهم كباحثين عن العمل وذلك بواسطة الخدمة الشبكية لمكتب العمل والموارد المعيشية في قسم "Oma asiointi" المعاملات الشخصية.
+    TARGET: To find web pages for jobs on the Internet, write “avoimet työpaikat” (vacancies) in the search engine’s text field. Many web pages for jobs allow you to fill in and send a job application and to enclose your CV.
+ PREDICTED: of : ( ) and , , and .
+--------------------------------------------------------------------------------
+Processing Epoch 02: 100%|██████████| 5712/5712 [11:17<00:00,  8.43it/s, loss=2.823]
+--------------------------------------------------------------------------------
+    SOURCE: عندما تلتحق بالدراسة، فستحصل على الحق في إنجاز كلتا الدرجتين العلميتين.
+    TARGET: When you are accepted into an institute of higher education, you receive the right to complete both degrees.
+ PREDICTED: When you have a of residence , you will receive a higher education degree .
+--------------------------------------------------------------------------------
+    SOURCE: عندما استقلت فنلندا سنة 1917، أصبحت هلسنكي العاصمة لجمهورية فنلندا.
+    TARGET: When Finland gained its independence in 1917, Helsinki became the capital of the republic.
+ PREDICTED: When gained its independence in , the became the capital of .
+--------------------------------------------------------------------------------
+Processing Epoch 03: 100%|██████████| 5712/5712 [11:18<00:00,  8.42it/s, loss=2.646]
+--------------------------------------------------------------------------------
+    SOURCE: مركز الضمان التقاعدي يقدم النصيحة لك، عندما تطلب التقاعد من الخارج.
+    TARGET: The Finnish Centre for Pension will give you advice for applying for pension abroad.
+ PREDICTED: The for will apply for a when you apply for .
+--------------------------------------------------------------------------------
+    SOURCE: اللجنة لا تتداول حالات التهميش والتمييز المتعلقة بالعمل.
+    TARGET: The Tribunal does not handle cases of employment-related discrimination.
+ PREDICTED: The does not have to pay and the work .
 --- 
 
 check the theoretical part: [Theoretical part](https://github.com/Esmail-ibraheem/Transformer-model-theoretical-part)
