@@ -48,7 +48,7 @@ os.chdir('/content/drive/MyDrive/TrainModel')
 
 %run train.py
 ```
-hours of training until now: 8 hours.
+hours of training until now: 4 hours.
 
 ---
 
