@@ -69,7 +69,7 @@ class MultiHeadAttentionBlock(nn.Module):
         self.d_model = d_model
         self.heads = heads 
 
-        assert d_model % heads == 0 , "d_mdoel is not devisable by heads"
+        assert d_model % heads == 0 , "d_model is not divisible by heads"
 
         self.d_k = d_model // heads 
         
@@ -81,20 +81,17 @@ class MultiHeadAttentionBlock(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     @staticmethod
-    def Attention(Query, Key, Value, mask, dropout: nn.Module):
-        d_k = Query.shape[-1]
-
-        self_attention_scores = (Query @ Key.transpose(-2, -1)) / math.sqrt(d_k)
-
+    def Attention(query, key, value, mask, dropout: nn.Dropout):
+        d_k = query.shape[-1]
+        self_attention_scores = (query @ key.transpose(-2, -1)) / math.sqrt(d_k)
         if mask is not None:
-            self_attention_scores = self_attention_scores.masked_fill_(mask == 0, -1e9)
+            self_attention_scores.masked_fill_(mask == 0, -1e9)
 
-        self_attention_scores = self_attention_scores.softmax(dim = -1)
-
+        self_attention_scores = self_attention_scores.softmax(dim=-1) 
         if dropout is not None:
             self_attention_scores = dropout(self_attention_scores)
 
-        return (self_attention_scores @ Value)
+        return (self_attention_scores @ value), self_attention_scores
 
     def forward(self, query, key, value, mask):
         Query = self.W_Q(query)
