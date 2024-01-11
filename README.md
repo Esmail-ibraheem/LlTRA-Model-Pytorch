@@ -24,7 +24,24 @@ from hugging Face
 ### Configuration:
 
 this is the settings of the model, You can customize the source and target languages, sequence lengths for each, the number of epochs, batch size, and more.
-
+```python
+def Get_configuration():
+    return {
+        "batch_size": 8,
+        "num_epochs": 30,
+        "lr": 10**-4,
+        "sequence_length": 100,
+        "d_model": 512,
+        "datasource": 'opus_infopankki',
+        "source_language": "ar",
+        "target_language": "en",
+        "model_folder": "weights",
+        "model_basename": "tmodel_",
+        "preload": "latest",
+        "tokenizer_file": "tokenizer_{0}.json",
+        "experiment_name": "runs/tmodel"
+    }
+```
 ---
 
 ### Search algorithm used:
