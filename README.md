@@ -60,7 +60,7 @@ hours of training: 4 hours.
 
 ---
 
-### Results:
+### Some Results:
 
     SOURCE: العائلات الناطقة بلغة أجنبية لديها الحق في خدمات الترجمة عند اللزوم.
     TARGET: A foreign-language family is entitled to interpreting services as necessary.
@@ -74,21 +74,9 @@ hours of training: 4 hours.
     TARGET: When you are accepted into an institute of higher education, you receive the right to complete both degrees.
     PREDICTED: When you have a of residence , you will receive a higher education degree .
     --------------------------------------------------------------------------------
-    SOURCE: عندما استقلت فنلندا سنة 1917، أصبحت هلسنكي العاصمة لجمهورية فنلندا.
-    TARGET: When Finland gained its independence in 1917, Helsinki became the capital of the republic.
-    PREDICTED: When gained its independence in , the became the capital of .
-    --------------------------------------------------------------------------------
-    SOURCE: مركز الضمان التقاعدي يقدم النصيحة لك، عندما تطلب التقاعد من الخارج.
-    TARGET: The Finnish Centre for Pension will give you advice for applying for pension abroad.
-    PREDICTED: The for will apply for a when you apply for .
-    --------------------------------------------------------------------------------
     SOURCE: اللجنة لا تتداول حالات التهميش والتمييز المتعلقة بالعمل.
     TARGET: The Tribunal does not handle cases of employment-related discrimination.
     PREDICTED: The does not have to pay and the work .
-    --------------------------------------------------------------------------------
-    SOURCE: القاسم المشترك لهذه الغرف هو عمل القهوة وإمكانية استعمال الكومبيوتر المجهز باشتراك الإنترنت مجاناً كذلك يمكن في عديد من هذه الغرف التمتع بالوجبات المحضرة في الغرفة بسعر معقول والتي تقدم في أيام العمل.
-    TARGET: All centres have a cafe and the opportunity to use a computer with a free-of-charge Internet connection. Most resident centres also offer the opportunity to enjoy an affordable lunch prepared at the centre that is served on weekdays.
-    PREDICTED: All centres are open to and at a . Many centres also offer an opportunity to use a at a centre in the centre where are.
     --------------------------------------------------------------------------------
     SOURCE: يجب عليك أيضاً أن تستطيع إثبات على سبيل المثال بالوصفة الطبية أو بالتقرير الطبي بأن الغرض من الدواء هو استخدامك أنت الشخصي.
     TARGET: In addition, you must be able to prove with a prescription or medical certificate, for example, that the medicine is intended for your personal use.
