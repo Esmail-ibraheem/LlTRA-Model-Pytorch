@@ -36,18 +36,8 @@ Greedy Algorithm for finding which token has the maximum probability.
 ### Training:
 
 I used my drive to upload the project and then connected it to the Google Collab to train it:
-#### still training. 
-```python
-from google.colab import drive
 
-drive.mount('/content/drive')
-
-import os
-
-os.chdir('/content/drive/MyDrive/TrainModel')
-
-%run train.py
-```
+pre trained model in colab.
 hours of training until now: 4 hours.
 
 ---
