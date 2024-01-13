@@ -88,4 +88,6 @@ hours of training: 4 hours.
 --- 
 
 check the theoretical part: [Theoretical part](https://github.com/Esmail-ibraheem/Transformer-model-theoretical-part)
-
+developing process: 
+1. https://youtu.be/Nm5CUo7ol18?si=5U3m4IM7crJ23Zzu
+2. https://youtu.be/O-jfimyP6Tw?si=ucPweGo2b7gh2rrI
