@@ -92,7 +92,9 @@ I used my drive to upload the project and then connected it to the Google Collab
 --- 
 
 check the theoretical part: [Theoretical part](https://github.com/Esmail-ibraheem/Transformer-model-theoretical-part)
+
 developing process: 
+
 1. https://youtu.be/uWchpx4J6MY?si=_FXGZV5-0Jq3IGfR
 2. https://youtu.be/Nm5CUo7ol18?si=5U3m4IM7crJ23Zzu
 3. https://youtu.be/O-jfimyP6Tw?si=ucPweGo2b7gh2rrI
