@@ -1,8 +1,8 @@
 # LlTRA-Model.
-# ![Transformer drawio](https://github.com/Esmail-ibraheem/LlTRA-Model/assets/113830751/564c75bf-d016-4e6f-9de3-b3cd19bfc743)
+![Transformer_Diagram_2 drawio](https://github.com/Esmail-ibraheem/LlTRA-Model/assets/113830751/699152b2-4970-424a-9562-e07e8203a90b)
 
 
-LlTRA stands for: Language to Language Transformer model from the paper "Attention is all you Need", building transformer model:[Transformer model](https://github.com/Esmail-ibraheem/Transformer-model) from scratch and use it for translation using pytorch.
+LlTRA stands for: Language to Language Transformer model from the paper "Attention is all you Need", building transformer model:[Transformer model](https://github.com/Esmail-ibraheem/Transformer-model) from scratch and using it for translation using pytorch.
 
 ### Problem Statement:
 
@@ -56,17 +56,19 @@ Greedy Algorithm for finding which token has the maximum probability.
 
 I used my drive to upload the project and then connected it to the Google Collab to train it:
 
-pre-trained model in collab.
-
-hours of training: 4 hours.
-
+- hours of training: 4 hours.
+- epochs: 20.
+- number of dataset rows: 2,934,399.
+- size of the dataset: 95MB.
+- size of the auto-converted parquet files: 153MB.
+- pre-trained model in collab.
 ---
 
 ### Some Results:
 
     SOURCE: العائلات الناطقة بلغة أجنبية لديها الحق في خدمات الترجمة عند اللزوم.
     TARGET: A foreign-language family is entitled to interpreting services as necessary.
-    PREDICTED: in a native language is provided by the services of the services for the elderly .
+    PREDICTED: in a native language, it is provided by the services of the services for the elderly.
     --------------------------------------------------------------------------------
     SOURCE: قمت بارتكاب جرائم وتُعتبر بأنك خطير على النظام أو الأمن العام.
     TARGET: you have committed crimes and are considered a danger to public order or safety
@@ -74,22 +76,23 @@ hours of training: 4 hours.
     --------------------------------------------------------------------------------
     SOURCE: عندما تلتحق بالدراسة، فستحصل على الحق في إنجاز كلتا الدرجتين العلميتين.
     TARGET: When you are accepted into an institute of higher education, you receive the right to complete both degrees.
-    PREDICTED: When you have a of residence , you will receive a higher education degree .
+    PREDICTED: When you have a of residence, you will receive a higher education degree.
     --------------------------------------------------------------------------------
     SOURCE: اللجنة لا تتداول حالات التهميش والتمييز المتعلقة بالعمل.
     TARGET: The Tribunal does not handle cases of employment-related discrimination.
-    PREDICTED: The does not have to pay and the work .
+    PREDICTED: The does not have to pay and the work.
     --------------------------------------------------------------------------------
     SOURCE: يجب عليك أيضاً أن تستطيع إثبات على سبيل المثال بالوصفة الطبية أو بالتقرير الطبي بأن الغرض من الدواء هو استخدامك أنت الشخصي.
     TARGET: In addition, you must be able to prove with a prescription or medical certificate, for example, that the medicine is intended for your personal use.
-    PREDICTED: You must also have to prove your identity with a friend or friend , for example , that the medicine is intended for your personal use .
+    PREDICTED: You must also have to prove your identity with a friend or friend, for example, that the medicine is intended for your personal use.
     --------------------------------------------------------------------------------
     SOURCE: إذا كان لديك ترخيص إقامة في فنلندا، ولكن لم تُمنح ترخيص إقامة استمراري، فسوف تصدر دائرة شؤون الهجرة قراراً بالترحيل.
     TARGET: If you already have a residence permit in Finland but are not granted a residence permit extension, the Finnish Immigration Service makes a deportation decision.
-    PREDICTED: If you have a residence permit in but are not granted a residence permit , the Service makes a decision .
+    PREDICTED: If you have a residence permit in but are not granted a residence permit, the Service makes a decision.
 --- 
 
 check the theoretical part: [Theoretical part](https://github.com/Esmail-ibraheem/Transformer-model-theoretical-part)
 developing process: 
-1. https://youtu.be/Nm5CUo7ol18?si=5U3m4IM7crJ23Zzu
-2. https://youtu.be/O-jfimyP6Tw?si=ucPweGo2b7gh2rrI
+1. https://youtu.be/uWchpx4J6MY?si=_FXGZV5-0Jq3IGfR
+2. https://youtu.be/Nm5CUo7ol18?si=5U3m4IM7crJ23Zzu
+3. https://youtu.be/O-jfimyP6Tw?si=ucPweGo2b7gh2rrI
