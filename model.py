@@ -1,5 +1,4 @@
-#LlTRA = LAnguage to Language Transformer model.
-
+#LlTRA = Language to Language Transformer model.
 import math
 import torch 
 import torch.nn as nn
@@ -69,7 +68,7 @@ class MultiHeadAttentionBlock(nn.Module):
 
         self.W_O = nn.Linear(d_model, d_model)
         self.dropout = nn.Dropout(dropout)
-        
+
     @staticmethod
     def Attention(query, key, value, mask, dropout: nn.Dropout):
         d_k = query.shape[-1]
@@ -104,7 +103,6 @@ class ResidualConnection(nn.Module):
         self.normalization = NormalizationLayer()
     def forward(self, x, subLayer):
         return x + self.dropout(subLayer(self.normalization(x)))
-
 
 class EncoderBlock(nn.Module):
     def __init__(self, encoder_self_attention_block: MultiHeadAttentionBlock, encoder_feed_forward_block: FeedForwardBlock, dropout: float) -> None:
