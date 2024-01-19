@@ -79,7 +79,6 @@ class MultiHeadAttentionBlock(nn.Module):
         self_attention_scores = self_attention_scores.softmax(dim=-1) 
         if dropout is not None:
             self_attention_scores = dropout(self_attention_scores)
-
         return (self_attention_scores @ value), self_attention_scores
     def forward(self, query, key, value, mask):
         Query = self.W_Q(query)
@@ -91,11 +90,9 @@ class MultiHeadAttentionBlock(nn.Module):
         Value = Value.view(Value.shape[0], Value.shape[1], self.heads, self.d_k).transpose(1,2)
 
         x, self.self_attention_scores = MultiHeadAttentionBlock.Attention(Query, Key, Value, mask, self.dropout)
-
         x = x.transpose(1,2).contiguous().view(x.shape[0], -1, self.heads * self.d_k)
-
         return self.W_O(x)
-
+        
 class ResidualConnection(nn.Module):
     def __init__(self, dropout: float) -> None:
         super().__init__()
@@ -113,7 +110,6 @@ class EncoderBlock(nn.Module):
     def forward(self, x, source_mask):
         x = self.residual_connection[0](x, lambda x: self.encoder_self_attention_block(x, x, x, source_mask))
         x = self.residual_connection[1](x, self.encoder_feed_forward_block)
-
         return x
 
 class Encoder(nn.Module):
@@ -124,7 +120,6 @@ class Encoder(nn.Module):
     def forward(self, x, source_mask):
         for layer in self.Layers:
             x = layer(x, source_mask)
-
         return self.normalization(x)
 
 class DecoderBlock(nn.Module):
@@ -138,7 +133,6 @@ class DecoderBlock(nn.Module):
         x = self.residual_connection[0](x, lambda x: self.decoder_self_attention_block(x, x, x, target_mask))
         x = self.residual_connection[1](x, lambda x: self.decoder_cross_attention_block(x, Encoder_output, Encoder_output, target_mask))
         x = self.residual_connection[2](x, self.decoder_feed_forward_block)
-
         return x
 
 class Decoder(nn.Module):
@@ -149,7 +143,6 @@ class Decoder(nn.Module):
     def forward(self, x, Encoder_output, mask, target_mask):
         for layer in self.Layers:
             x = layer(x, Encoder_output, mask, target_mask)
-
         return self.normalization(x)
 
 class LinearLayer(nn.Module):
@@ -158,7 +151,6 @@ class LinearLayer(nn.Module):
         self.Linear = nn.Linear(d_model, vocab_size)
     def forward(self, x):
         return self.Linear(x)
-
 
 class TransformerBlock(nn.Module):
     def __init__(self, encoder: Encoder, decoder: Decoder, source_embedding: InputEmbeddingsLayer, target_embedding: InputEmbeddingsLayer, source_position: PositionalEncodingLayer, target_position: PositionalEncodingLayer, Linear: LinearLayer) -> None:
