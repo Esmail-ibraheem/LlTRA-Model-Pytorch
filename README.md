@@ -61,6 +61,8 @@ I used my drive to upload the project and then connected it to the Google Collab
 - number of dataset rows: 2,934,399.
 - size of the dataset: 95MB.
 - size of the auto-converted parquet files: 153MB.
+- Arabic tokens: 29999.
+- English tokens: 15697.
 - pre-trained model in collab.
 ---
 
