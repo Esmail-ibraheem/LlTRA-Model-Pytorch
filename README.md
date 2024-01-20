@@ -64,6 +64,7 @@ I used my drive to upload the project and then connected it to the Google Collab
 - Arabic tokens: 29999.
 - English tokens: 15697.
 - pre-trained model in collab.
+- BLUE score from Arabic to English: 19.7 
 ---
 
 ### Some Results:
