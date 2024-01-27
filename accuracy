@@ -1,0 +1,7 @@
+
+BLUE Score : 19.7, after 4 hours in google colab.
+the actual papre is : 41.8 after 3.5 days, on 8 gpus.
+
+to calculate the : BLUE = Brevity_Penalty * exp(1/N * (log(Precision_1) + log(Precision_2) + ... + log(Precision_N))) 
+
+accuracy: 50 % in 20 epochs 
