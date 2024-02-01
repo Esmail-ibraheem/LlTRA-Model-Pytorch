@@ -2,7 +2,6 @@ from dataclasses import dataclass
 import math
 import torch 
 import torch.nn as nn
-# from torch import nn as neural_network
 
 @dataclass
 class Model_Arguments:
