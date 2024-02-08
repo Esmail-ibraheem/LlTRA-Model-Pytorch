@@ -13,7 +13,7 @@ class Model_Arguments:
     Layers: int = 6
     heads: int = 8 
     dropout: float = 0.1 
-    d_ff: int = 2048 # you can edit it depends on the power of your machine 
+    d_ff: int = 2048 # You can edit it depending on the power of your machine 
 
 class InputEmbeddingsLayer(nn.Module):
     def __init__(self, d_model: int, vocab_size: int) -> None:
