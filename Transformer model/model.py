@@ -1,4 +1,4 @@
-#llTRA = Language to Language Transformer model 
+#LlTRA = Language to Language Transformer model 
 import math
 import torch 
 import torch.nn as nn
