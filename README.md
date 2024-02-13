@@ -107,5 +107,7 @@ special thanks to:
 1. [Explain the transformers](https://www.youtube.com/watch?v=bCz4OMemCcA&list=PPSV )
 2. [explain the transformers and beyond the mathematical things](https://www.youtube.com/watch?v=rPFkX5fJdRY&list=PPSV)
 3. [Explain the transformer, the paper itself](https://www.youtube.com/watch?v=CXepv4ItZzM&list=PPSV)
-4. [my pre trained model](https://colab.research.google.com/drive/1DX7NJoTMQ0py93nvzmEVRYxwSzYt0dRH?usp=drive_link)
-5. [my model in drive](https://drive.google.com/drive/folders/1GR6U1rLWZo--3r0ZLWTmM2Ge8Zq_NkE-?usp=drive_link)
+---
+
+- [my pre trained model](https://colab.research.google.com/drive/1DX7NJoTMQ0py93nvzmEVRYxwSzYt0dRH?usp=drive_link)
+- [my model in drive](https://drive.google.com/drive/folders/1GR6U1rLWZo--3r0ZLWTmM2Ge8Zq_NkE-?usp=drive_link)
