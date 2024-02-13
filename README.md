@@ -104,9 +104,8 @@ developing process:
 3. https://youtu.be/O-jfimyP6Tw?si=ucPweGo2b7gh2rrI
 
 special thanks to:
-1. [coding the transformers from scratch](https://www.youtube.com/watch?v=ISNdQcPhsts&list=PPSV)
-2. [Explain the transformers](https://www.youtube.com/watch?v=bCz4OMemCcA&list=PPSV )
-3. [explain the transformers and beyond the mathematical things](https://www.youtube.com/watch?v=rPFkX5fJdRY&list=PPSV)
-4. [Explain the transformer, the paper itself](https://www.youtube.com/watch?v=CXepv4ItZzM&list=PPSV)
-5. [my pre trained model](https://colab.research.google.com/drive/1DX7NJoTMQ0py93nvzmEVRYxwSzYt0dRH?usp=drive_link)
-6. [my model in drive](https://drive.google.com/drive/folders/1GR6U1rLWZo--3r0ZLWTmM2Ge8Zq_NkE-?usp=drive_link)
+1. [Explain the transformers](https://www.youtube.com/watch?v=bCz4OMemCcA&list=PPSV )
+2. [explain the transformers and beyond the mathematical things](https://www.youtube.com/watch?v=rPFkX5fJdRY&list=PPSV)
+3. [Explain the transformer, the paper itself](https://www.youtube.com/watch?v=CXepv4ItZzM&list=PPSV)
+4. [my pre trained model](https://colab.research.google.com/drive/1DX7NJoTMQ0py93nvzmEVRYxwSzYt0dRH?usp=drive_link)
+5. [my model in drive](https://drive.google.com/drive/folders/1GR6U1rLWZo--3r0ZLWTmM2Ge8Zq_NkE-?usp=drive_link)
