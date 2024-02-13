@@ -1,5 +1,6 @@
 # LlTRA-Model.
-![Transformer_Diagram_2 drawio](https://github.com/Esmail-ibraheem/LlTRA-Model/assets/113830751/699152b2-4970-424a-9562-e07e8203a90b)
+![Transformer_Diagram_2 drawio](https://github.com/Esmail-ibraheem/LlTRA-Model/assets/113830751/cdc030e6-ed4c-4040-a00d-50ab780cafb7)
+
 
 
 LlTRA stands for: Language to Language Transformer model from the paper "Attention is all you Need", building transformer model:[Transformer model](https://github.com/Esmail-ibraheem/Transformer-model) from scratch and using it for translation using pytorch.
