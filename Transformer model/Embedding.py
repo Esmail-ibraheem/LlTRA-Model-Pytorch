@@ -84,74 +84,75 @@ class WordEmbeddingFromScratch(L.LightningModule):
         loss = self.loss_Function(output_i, label_i[0])
         return loss 
 
-modelFromScratch = WordEmbeddingFromScratch()
+if __name__ == '__main__':
+    modelFromScratch = WordEmbeddingFromScratch()
 
-print("Before optimization, the parameters are...")
-for name, param in modelFromScratch.named_parameters():
-    print(name, param.data)
+    print("Before optimization, the parameters are...")
+    for name, param in modelFromScratch.named_parameters():
+        print(name, param.data)
 
-data = {
-    "w1": [modelFromScratch.input1_w1.item(),
-           modelFromScratch.input2_w1.item(),
-           modelFromScratch.input3_w1.item(),
-           modelFromScratch.input4_w1.item()], 
+    data = {
+        "w1": [modelFromScratch.input1_w1.item(),
+            modelFromScratch.input2_w1.item(),
+            modelFromScratch.input3_w1.item(),
+            modelFromScratch.input4_w1.item()], 
 
-    "w2": [modelFromScratch.input1_w2.item(),
-           modelFromScratch.input2_w2.item(),
-           modelFromScratch.input3_w2.item(),
-           modelFromScratch.input4_w2.item()], 
-    
-    "token": ["My", "name", "is", "Esmail"], 
-    "input": ["input1", "input2", "input3", "input4"]
-} 
+        "w2": [modelFromScratch.input1_w2.item(),
+            modelFromScratch.input2_w2.item(),
+            modelFromScratch.input3_w2.item(),
+            modelFromScratch.input4_w2.item()], 
+        
+        "token": ["My", "name", "is", "Esmail"], 
+        "input": ["input1", "input2", "input3", "input4"]
+    } 
 
-dataFrame = pd.DataFrame(data)
-print(dataFrame)
+    dataFrame = pd.DataFrame(data)
+    print(dataFrame)
 
-sns.scatterplot(data = dataFrame, x= "w1", y = "w2")
-plt.text(dataFrame.w1[0], dataFrame.w2[0], dataFrame.token[0], 
-         horizontalalignment = 'left', 
-         size = 'medium', 
-         color = 'black',
-         weight = 'semibold')
-plt.text(dataFrame.w1[1], dataFrame.w2[1], dataFrame.token[1], 
-         horizontalalignment = 'left', 
-         size = 'medium', 
-         color = 'black',
-         weight = 'semibold')
-plt.text(dataFrame.w1[2], dataFrame.w2[2], dataFrame.token[2], 
-         horizontalalignment = 'left', 
-         size = 'medium', 
-         color = 'black',
-         weight = 'semibold')
-plt.text(dataFrame.w1[3], dataFrame.w2[3], dataFrame.token[3], 
-         horizontalalignment = 'left', 
-         size = 'medium', 
-         color = 'black',
-         weight = 'semibold')
-plt.show()
+    sns.scatterplot(data = dataFrame, x= "w1", y = "w2")
+    plt.text(dataFrame.w1[0], dataFrame.w2[0], dataFrame.token[0], 
+            horizontalalignment = 'left', 
+            size = 'medium', 
+            color = 'black',
+            weight = 'semibold')
+    plt.text(dataFrame.w1[1], dataFrame.w2[1], dataFrame.token[1], 
+            horizontalalignment = 'left', 
+            size = 'medium', 
+            color = 'black',
+            weight = 'semibold')
+    plt.text(dataFrame.w1[2], dataFrame.w2[2], dataFrame.token[2], 
+            horizontalalignment = 'left', 
+            size = 'medium', 
+            color = 'black',
+            weight = 'semibold')
+    plt.text(dataFrame.w1[3], dataFrame.w2[3], dataFrame.token[3], 
+            horizontalalignment = 'left', 
+            size = 'medium', 
+            color = 'black',
+            weight = 'semibold')
+    plt.show()
 
-# Training loop
-# optimizer = Adam(modelFromScratch.parameters(), lr=0.1)
-# num_epochs = 100
-# for epoch in range(num_epochs):
-#     total_loss = 0
-#     for inputs, labels in dataloader:
-#         optimizer.zero_grad()
-#         outputs = modelFromScratch(inputs)
-#         loss = modelFromScratch.loss_Function(outputs, labels[0])
-#         loss.backward()
-#         optimizer.step()
-#         total_loss += loss.item()
-#     print(f"Epoch {epoch+1}, Loss: {total_loss}")
+    # Training loop
+    # optimizer = Adam(modelFromScratch.parameters(), lr=0.1)
+    # num_epochs = 100
+    # for epoch in range(num_epochs):
+    #     total_loss = 0
+    #     for inputs, labels in dataloader:
+    #         optimizer.zero_grad()
+    #         outputs = modelFromScratch(inputs)
+    #         loss = modelFromScratch.loss_Function(outputs, labels[0])
+    #         loss.backward()
+    #         optimizer.step()
+    #         total_loss += loss.item()
+    #     print(f"Epoch {epoch+1}, Loss: {total_loss}")
 
-# # After training
-# print("After optimization, the parameters are...")
-# for name, param in modelFromScratch.named_parameters():
-#     print(name, param.data)
+    # # After training
+    # print("After optimization, the parameters are...")
+    # for name, param in modelFromScratch.named_parameters():
+    #     print(name, param.data)
 
-softmax = nn.Softmax(dim = 0)
-print(torch.round(softmax(modelFromScratch(torch.tensor([[1., 0., 0., 0.]]))), decimals=2))
-print(torch.round(softmax(modelFromScratch(torch.tensor([[0., 1., 0., 0.]]))), decimals=2))
-print(torch.round(softmax(modelFromScratch(torch.tensor([[0., 0., 1., 0.]]))), decimals=2))
-print(torch.round(softmax(modelFromScratch(torch.tensor([[0., 0., 0., 1.]]))), decimals=2))
+    softmax = nn.Softmax(dim = 0)
+    print(torch.round(softmax(modelFromScratch(torch.tensor([[1., 0., 0., 0.]]))), decimals=2))
+    print(torch.round(softmax(modelFromScratch(torch.tensor([[0., 1., 0., 0.]]))), decimals=2))
+    print(torch.round(softmax(modelFromScratch(torch.tensor([[0., 0., 1., 0.]]))), decimals=2))
+    print(torch.round(softmax(modelFromScratch(torch.tensor([[0., 0., 0., 1.]]))), decimals=2))
