@@ -183,7 +183,7 @@ def train_model(configuration):
             optimizer.step()
             optimizer.zero_grad(set_to_none=True)
 
-            run_validation(model, validation_dataLoader, source_tokenizer, target_tokenizer, configuration['sequence_length'], device, lambda msg: batch_iterator.write(msg), global_step, writer)
+            # run_validation(model, validation_dataLoader, source_tokenizer, target_tokenizer, configuration['sequence_length'], device, lambda msg: batch_iterator.write(msg), global_step, writer)
 
             global_step += 1
 
