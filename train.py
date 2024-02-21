@@ -48,32 +48,32 @@ def greedy_search(model, source, source_mask, source_tokenizer, target_tokenizer
     return decoder_input.squeeze(0)
 
 
-# def run_validation(model, validation_ds, source_tokenizer, target_tokenizer, max_len, device, print_msg, global_step, writer, num_examples=2):
-#     model.eval()
-#     count = 0
-#     console_width = 80
+def run_validation(model, validation_ds, source_tokenizer, target_tokenizer, max_len, device, print_msg, global_step, writer, num_examples=2):
+    model.eval()
+    count = 0
+    console_width = 80
 
-#     with torch.no_grad():
-#         for batch in validation_ds:
-#             count += 1
-#             encoder_input = batch["encoder_input"].to(device) 
-#             encoder_mask = batch["encoder_input_mask"].to(device) 
+    with torch.no_grad():
+        for batch in validation_ds:
+            count += 1
+            encoder_input = batch["encoder_input"].to(device) 
+            encoder_mask = batch["encoder_input_mask"].to(device) 
 
-#             assert encoder_input.size(0) == 1, "Batch size must be 1 for validation"
+            assert encoder_input.size(0) == 1, "Batch size must be 1 for validation"
 
-#             model_out = greedy_search(model, encoder_input, encoder_mask, source_tokenizer, target_tokenizer, max_len, device)
+            model_out = greedy_search(model, encoder_input, encoder_mask, source_tokenizer, target_tokenizer, max_len, device)
 
-#             source_text = batch["target_text"][0]
-#             target_text = batch["target_text"][0]
-#             model_out_text = target_tokenizer.decode(model_out.detach().cpu().numpy())
+            source_text = batch["target_text"][0]
+            target_text = batch["target_text"][0]
+            model_out_text = target_tokenizer.decode(model_out.detach().cpu().numpy())
 
-#             print_msg('-'*console_width)
-#             print_msg(f"{f'SOURCE: ':>12}{source_text}")
-#             print_msg(f"{f'TARGET: ':>12}{target_text}")
-#             print_msg(f"{f'PREDICTED: ':>12}{model_out_text}")
+            print_msg('-'*console_width)
+            print_msg(f"{f'SOURCE: ':>12}{source_text}")
+            print_msg(f"{f'TARGET: ':>12}{target_text}")
+            print_msg(f"{f'PREDICTED: ':>12}{model_out_text}")
 
-#             if count == num_examples:
-#                 break
+            if count == num_examples:
+                break
 
 def Get_All_Sentences(dataset, language):
     for lang in dataset:
