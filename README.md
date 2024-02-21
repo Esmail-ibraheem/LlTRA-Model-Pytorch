@@ -103,10 +103,6 @@ developing process:
 2. https://youtu.be/Nm5CUo7ol18?si=5U3m4IM7crJ23Zzu
 3. https://youtu.be/O-jfimyP6Tw?si=ucPweGo2b7gh2rrI
 
-special thanks to:
-1. [Explain the transformers](https://www.youtube.com/watch?v=bCz4OMemCcA&list=PPSV )
-2. [explain the transformers and beyond the mathematical things](https://www.youtube.com/watch?v=rPFkX5fJdRY&list=PPSV)
-3. [Explain the transformer, the paper itself](https://www.youtube.com/watch?v=CXepv4ItZzM&list=PPSV)
 ---
 
 - [my pre trained model](https://colab.research.google.com/drive/1DX7NJoTMQ0py93nvzmEVRYxwSzYt0dRH?usp=drive_link)
