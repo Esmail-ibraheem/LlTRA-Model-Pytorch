@@ -71,8 +71,3 @@ class BilingualDataset(Dataset):
             "source_text": source_text,
             "target_text": target_text 
         }
-
-
-def casual_mask(size):
-    mask = torch.triu(torch.ones((1, size, size)), diagonal=1).type(torch.int)
-    return mask == 0
