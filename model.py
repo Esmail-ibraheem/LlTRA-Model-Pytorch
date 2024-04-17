@@ -102,7 +102,10 @@ class ResidualConnection(nn.Module):
         return x + self.dropout(subLayer(self.normalization(x)))
 
 class EncoderBlock(nn.Module):
-    def __init__(self, encoder_self_attention_block: MultiHeadAttentionBlock, encoder_feed_forward_block: FeedForwardBlock, dropout: float) -> None:
+    def __init__(self, 
+                 encoder_self_attention_block: MultiHeadAttentionBlock, 
+                 encoder_feed_forward_block: FeedForwardBlock, 
+                 dropout: float) -> None:
         super().__init__()
         self.encoder_self_attention_block = encoder_self_attention_block
         self.encoder_feed_forward_block = encoder_feed_forward_block
@@ -123,7 +126,11 @@ class Encoder(nn.Module):
         return self.normalization(x)
 
 class DecoderBlock(nn.Module):
-    def __init__(self, decoder_self_attention_block: MultiHeadAttentionBlock, decoder_cross_attention_block: MultiHeadAttentionBlock, decoder_feed_forward_block: FeedForwardBlock, dropout: float) -> None:
+    def __init__(self, 
+                 decoder_self_attention_block: MultiHeadAttentionBlock, 
+                 decoder_cross_attention_block: MultiHeadAttentionBlock, 
+                 decoder_feed_forward_block: FeedForwardBlock, 
+                 dropout: float) -> None:
         super().__init__()
         self.decoder_self_attention_block = decoder_self_attention_block
         self.decoder_cross_attention_block = decoder_cross_attention_block
@@ -153,7 +160,14 @@ class LinearLayer(nn.Module):
         return self.Linear(x)
 
 class TransformerBlock(nn.Module):
-    def __init__(self, encoder: Encoder, decoder: Decoder, source_embedding: InputEmbeddingsLayer, target_embedding: InputEmbeddingsLayer, source_position: PositionalEncodingLayer, target_position: PositionalEncodingLayer, Linear: LinearLayer) -> None:
+    def __init__(self, 
+                 encoder: Encoder, 
+                 decoder: Decoder, 
+                 source_embedding: InputEmbeddingsLayer, 
+                 target_embedding: InputEmbeddingsLayer, 
+                 source_position: PositionalEncodingLayer, 
+                 target_position: PositionalEncodingLayer, 
+                 Linear: LinearLayer) -> None:
         super().__init__()
         self.encoder = encoder 
         self.decoder = decoder 
@@ -174,7 +188,15 @@ class TransformerBlock(nn.Module):
         return self.Linear(x)
 
 
-def TransformerModel(source_vocab_size: int, target_vocab_size: int, source_sequence_length: int, target_sequence_length: int, d_model: int = 512, Layers: int = 6, heads: int = 8, dropout: float = 0.1, d_ff: int = 2048)->TransformerBlock:
+def TransformerModel(source_vocab_size: int, 
+                     target_vocab_size: int, 
+                     source_sequence_length: int, 
+                     target_sequence_length: int, 
+                     d_model: int = 512, 
+                     Layers: int = 6, 
+                     heads: int = 8, 
+                     dropout: float = 0.1, 
+                     d_ff: int = 2048)->TransformerBlock:
 
     source_embedding = InputEmbeddingsLayer(d_model, source_vocab_size)
     source_position = PositionalEncodingLayer(d_model, source_sequence_length, dropout)
