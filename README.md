@@ -1,4 +1,5 @@
-# LlTRA-Model.
+<h1 align="center">LlTRA-Model.</h1>
+
 ![Transformer_Diagram_2 drawio](https://github.com/Esmail-ibraheem/LlTRA-Model/assets/113830751/cdc030e6-ed4c-4040-a00d-50ab780cafb7)
 
 
